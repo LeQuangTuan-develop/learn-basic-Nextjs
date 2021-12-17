@@ -18,6 +18,9 @@ const NavbarMenu = () => {
           <Link href="/jokes/random" passHref>
             <Nav.Link>Jokes</Nav.Link>
           </Link>
+          <Link href="/books" passHref>
+            <Nav.Link>Books</Nav.Link>
+          </Link>
         </Nav>
       </Container>
     </Navbar>

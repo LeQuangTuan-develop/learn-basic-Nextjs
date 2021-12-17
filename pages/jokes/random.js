@@ -22,7 +22,22 @@ const Random = ({ joke }) => {
 
 // Du lieu phu thuoc vao moi request nhung van tao ra HTML tinh cho frontend => tot cho SEO
 export const getServerSideProps = async () => {
-  const joke = await getRandomJoke();
+  let joke = await getRandomJoke();
+  // joke = false;
+
+  if (!joke)
+    return {
+      notFound: true,
+    };
+
+  // if (!joke) {
+  //   return {
+  //     redirect: {
+  //       destination: '/',
+  //       permanent: false,
+  //     },
+  //   }
+  // }
 
   return {
     props: {

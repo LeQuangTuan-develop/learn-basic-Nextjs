@@ -19,7 +19,9 @@ const Posts = ({ posts }) => {
             >
               <Card.Header>Header</Card.Header>
               <Card.Body>
-                <Card.Title>{post.title}</Card.Title>
+                <Card.Title>
+                  {post.id} -- {post.title}
+                </Card.Title>
                 <Card.Text>{post.body}</Card.Text>
                 <Link href={`/posts/${post.id}`} passHref>
                   <Card.Link>
@@ -38,7 +40,7 @@ const Posts = ({ posts }) => {
 // get static data from backend / db / API
 
 export const getStaticProps = async () => {
-  const posts = await getPosts();
+  const posts = await getPosts(10);
 
   return {
     props: {
