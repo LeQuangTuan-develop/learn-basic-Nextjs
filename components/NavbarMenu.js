@@ -6,7 +6,7 @@ const NavbarMenu = () => {
     <Navbar bg="dark" variant="dark">
       <Container>
         <Link href="/" passHref>
-          <Navbar.Brand>My Next App</Navbar.Brand>
+          <Navbar.Brand>Wolfhybrid</Navbar.Brand>
         </Link>
         <Nav className="me-auto">
           <Link href="/posts" passHref>
